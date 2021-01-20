@@ -7,10 +7,34 @@
 
     <style>
 
+            html,body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+            div{
+                width: 80%;
+                height: 500px;
+                background-color: aqua;
+            }
+            p{
+                font-size: 18px;
+            }
 
     </style>
 </head>
 <body>
+    <div>
+        <h1>Instruções</h1>
+        <p>
+            Sempre que quiser reiniciar a calculadora precione a tecla F5 do teclado.
+        </p>
+        <p>Caso esteja no celular apenas recarrege o navegador</p>
+    </div>
+
+
     <script>
         
         var metro = window.prompt('São quantos metros quadrados?');
@@ -18,7 +42,8 @@
             metro = parseFloat(metro);
             valor = parseFloat(valor);
             let resultado =  valor/metro;
-            window.prompt('O valor do metro quadrado é: '+ resultado);
+            resultado = Math.round(resultado)
+            window.prompt('O valor do metro quadrado é: R$'+ resultado+',00');
        
     </script>
 </body>
